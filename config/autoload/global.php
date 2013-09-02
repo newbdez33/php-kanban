@@ -12,5 +12,7 @@
  */
 
 return array(
-    // ...
+    'phpSettings' => array(
+    	'date.timezone' => 'Asia/Hong_Kong',
+    ),
 );

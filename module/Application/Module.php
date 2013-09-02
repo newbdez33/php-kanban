@@ -19,6 +19,18 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+
+        $this->setPhpSettings($e);
+    }
+
+    private function setPhpSettings(MvcEvent $e)
+    {
+        $config = $e->getApplication()->getConfig();
+        if ($config['phpSettings']) {
+            foreach ($config['phpSettings'] as $key => $value) {
+                ini_set($key, $value);
+            }
+        }
     }
 
     public function getConfig()
