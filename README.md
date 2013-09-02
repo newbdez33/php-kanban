@@ -10,3 +10,7 @@ PHP Kanban app. Let's support Github issues first.
 
 2. INSTALL EXTERNAL    
 `php composer.phar install`
+
+3. RUN   
+`cd public
+sudo php 0.0.0.0:80`
